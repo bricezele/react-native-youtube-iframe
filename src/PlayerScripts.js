@@ -97,6 +97,7 @@ export const MAIN_SCRIPT = (
     controls = true,
     showClosedCaptions,
     preventFullScreen = false,
+    showinfo = false
   } = initialPlayerParams;
 
   // _s postfix to refer to "safe"
@@ -211,6 +212,7 @@ export const MAIN_SCRIPT = (
             iv_load_policy: ${iv_load_policy},
             modestbranding: ${modestbranding_s},
             cc_load_policy: ${showClosedCaptions_s},
+            showinfo: ${showinfo},
           },
           events: {
             'onReady': onPlayerReady,
