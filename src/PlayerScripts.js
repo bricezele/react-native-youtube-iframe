@@ -97,7 +97,7 @@ export const MAIN_SCRIPT = (
     controls = true,
     showClosedCaptions,
     preventFullScreen = false,
-    showinfo = false
+    showinfo
   } = initialPlayerParams;
 
   // _s postfix to refer to "safe"
@@ -110,6 +110,7 @@ export const MAIN_SCRIPT = (
   const preventFullScreen_s = preventFullScreen ? 0 : 1;
   const showClosedCaptions_s = showClosedCaptions ? 1 : 0;
   const contentScale_s = typeof contentScale === 'number' ? contentScale : 1.0;
+  const showinfo_s = showinfo ? 1 : 0;
 
   const list = typeof playList === 'string' ? playList : undefined;
   const listType = typeof playList === 'string' ? 'playlist' : undefined;
@@ -212,7 +213,7 @@ export const MAIN_SCRIPT = (
             iv_load_policy: ${iv_load_policy},
             modestbranding: ${modestbranding_s},
             cc_load_policy: ${showClosedCaptions_s},
-            showinfo: ${showinfo},
+            showinfo: ${showinfo_s},
           },
           events: {
             'onReady': onPlayerReady,
