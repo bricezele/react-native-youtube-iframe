@@ -213,7 +213,7 @@ export const MAIN_SCRIPT = (
             iv_load_policy: ${iv_load_policy},
             modestbranding: ${modestbranding_s},
             cc_load_policy: ${showClosedCaptions_s},
-            showinfo: ${showinfo_s},
+            showinfo: 0,
           },
           events: {
             'onReady': onPlayerReady,
