@@ -238,6 +238,10 @@ export const MAIN_SCRIPT = (
       }
 
       function onPlayerReady(event) {
+        //Remove title bar
+        var iframevar = document.getElementById('player');
+        var titleBar = iframevar?.contentWindow?.document?.document.getElementsByClassName("ytp-chrome-top")[0];
+        titleBar.remove();
         window.ReactNativeWebView.postMessage(JSON.stringify({eventType: 'playerReady'}))
       }
 
